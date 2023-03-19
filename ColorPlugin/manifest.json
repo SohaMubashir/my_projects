@@ -1,0 +1,17 @@
+{
+    "name": "Color Changer",
+    "version": "1.0",
+    "description": "Change the background and text colors of any webpage.",
+    "manifest_version": 3,
+    "permissions": ["activeTab"],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["popup.js"]
+      }
+    ]
+  }
+  
