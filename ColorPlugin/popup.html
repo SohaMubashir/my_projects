@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Pop-up Modal</title>
+    <style>
+      /* Modal */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+
+      /* Modal content */
+      .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 600px;
+      }
+
+      /* Close button */
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      .btn{
+        padding: 10px 20px;
+  background-color: dodgerblue;
+  border: 1px solid #ddd;
+  color: white;
+  cursor: pointer
+      }
+      .form label{
+        margin: 5px 10px 5px 0;
+      }
+      .form input{
+        vertical-align: middle;
+  margin: 5px 10px 5px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+      }
+      
+    </style>
+  </head>
+  <body>
+   <center><h1>Change Background & Text Color</h1>
+    <button id="change-color-button" class="btn">Change Colors</button></center> 
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <form class="form">
+          <label for="bg-color-picker">Background Color:</label>
+          <input id="bg-color-picker" type="color" value="#ffffff"><br>
+          <label for="text-color-picker">Text Color:</label>
+          <input id="text-color-picker" type="color" value="#000000"><br>
+          <button type="button" class="btn" id="apply-colors-button">Apply Colors</button>
+        </form>
+      </div>
+
+    </div>
+
+    <!-- Script to open and close modal -->
+    <script>
+      function openModal() {
+        document.getElementById("myModal").style.display = "block";
+      }
+
+      function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+      }
+    </script>
+      <script src="popup.js"></script>
+
+  </body>
+</html>
